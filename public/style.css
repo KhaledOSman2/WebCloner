@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d2e36;
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+form {
+    background: #3e3e3e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    border: 1px solid #4CAF50;
+    max-width: 530px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.label-container {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: left;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0882e7;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-right: 15px;
+}
+
+button:hover {
+    background-color: #0882e7;
+}
+
+.cancel-icon {
+    cursor: pointer;
+}
+
+.cancel-icon img {
+    width: 50px;
+    height: 52px;
+}
+
+.download-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.settings-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.settings-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.clear-icon {
+    position: absolute;
+    top: 15px;
+    right: 80px;
+    cursor: pointer;
+}
+
+.clear-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.terminal {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 16px;
+    height: 300px;
+    width: 90%;
+    max-width: 700px;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    border: 1px solid #4CAF50;
+    margin: 10px auto 0 auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #2e2e2e;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #4CAF50;
+}
+
+.depth-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.depth-label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.recursive-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recursive-label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.modal-content label {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.modal-content input[type="number"] {
+    padding: 8px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.modal-content input[type="checkbox"] {
+    margin: 10px;
+    flex-shrink: 0;
+}
+
+.modal-content button {
+    padding: 8px 16px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .terminal {
+        font-size: 10px;
+    }
+
+    form,
+    .modal-content {
+        width: 330px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #downloadButton {
+        width: 50%;
+    }
+}

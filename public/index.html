@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cloner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Website Cloner</h1>
+
+    <!-- Gear Icon -->
+    <div class="settings-icon">
+        <img src="gear-icon.png" alt="Settings" id="settingsButton">
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Settings</h1>
+            <div>
+                <label><input type="checkbox" id="htmlCheckbox" style="height: 20px; width: 20px;"> HTML</label>
+                <label><input type="checkbox" id="cssCheckbox" style="height: 20px; width: 20px;"> CSS</label>
+                <label><input type="checkbox" id="jsCheckbox" style="height: 20px; width: 20px;"> JavaScript</label>
+                <label><input type="checkbox" id="imagesCheckbox" style="height: 20px; width: 20px;"> Images</label>
+                <label><input type="checkbox" id="mediaCheckbox" style="height: 20px; width: 20px;"> Media</label>
+                <div class="recursive-wrapper">
+                    <label for="recursiveCheckbox" class="recursive-label" style="width: 160px;">
+                        <input type="checkbox" id="recursiveCheckbox" style="height: 20px; width: 20px;"
+                            checked="">Recursive:</label>
+                    <input type="number" id="RecursiveInput" value="5" style="width: 92.6px;height: 39.6px;">
+                </div>
+
+                <div class="depth-wrapper">
+                    <label for="maxDepthInput" style="width: 160px;">Max Depth:</label>
+                    <input type="number" id="maxDepthInput" value="50" style="width: 92.6px;height: 39.6px;">
+                </div>
+
+            </div>
+
+            <button id="saveSettingsButton" style="height: 42px;width: 132px;font-weight: 600;">Save Settings</button>
+        </div>
+    </div>
+
+    <form id="downloadForm">
+        <label for="websiteUrl">Website URL:</label>
+        <input type="text" id="websiteUrl" placeholder="Enter website URL" required="">
+
+        <label for="directoryName">Directory Name:</label>
+        <input type="text" id="directoryName" placeholder="Enter directory name" required="">
+
+        <div class="button-container" style="height: 80px;">
+            <button type="submit" style="width: 190px; height: 50px;">Download Website</button>
+            <div class="cancel-icon" id="cancelButton" style="display: none;width: 1px;">
+                <img src="cancel-icon.png" alt="Cancel Operation" style="width: 50px;height: 52px;">
+            </div>
+            <div class="download-icon" id="downloadButton" style="display: none;width: 1px;">
+                <img src="download.png" style="width: 52px;">
+            </div>
+        </div>
+    </form>
+
+    <pre id="output" class="terminal" style="display: none;"></pre>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
